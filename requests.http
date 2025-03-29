@@ -1,0 +1,49 @@
+### GET ALL ITEMS
+GET http://localhost:8080/api/v1/students
+
+###
+
+### GET ONE ITEM
+GET http://localhost:8080/api/v1/students/2
+
+###
+
+### DELETE ONE ITEM
+DELETE http://localhost:8080/api/v1/students/3
+
+###
+
+### CREATE ONE ITEM
+POST http://localhost:8080/api/v1/students
+Content-Type: application/json
+
+{
+  "name": "Mark",
+  "surname": "Havrylov",
+  "dateOfBirth": "2004-01-15"
+}
+
+
+### UPDATE ONE ITEM
+PUT http://localhost:8080/api/v1/students
+Content-Type: application/json
+
+{
+  "id": "2",
+  "name": "Vasyl",
+  "surname": "Koval",
+  "dateOfBirth": "2004-01-20"
+}
+
+### GET HELLO USER
+GET http://localhost:8080/api/v1/students/hello/user
+
+
+### GET HELLO ADMIN
+GET http://localhost:8080/api/v1/students/hello/admin
+
+
+### GET HELLO UNKNOWN
+GET http://localhost:8080/api/v1/students/hello/unknown
+
+

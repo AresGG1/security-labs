@@ -14,6 +14,8 @@ services:
       - SPRING_DATA_MONGODB_HOST=mongodb
       - SPRING_DATA_MONGODB_PORT=27017
       - SPRING_DATA_MONGODB_DATABASE=mydatabase
+      - ADMIN_PASS=${ADMIN_PASS}  # This will be replaced with the value from .env
+      - ADMIN_NAME=${ADMIN_NAME}  # This will be replaced with the value from .env
 
   mongodb:
     image: mongo:6.0

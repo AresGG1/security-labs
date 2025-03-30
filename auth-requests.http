@@ -1,0 +1,40 @@
+### No credential fails
+GET http://localhost:8080/api/v1/students/hello/user
+### Wrong credential fail
+GET http://localhost:8080/api/v1/students/hello/user
+Authorization: Basic user1 user1
+### user auth
+GET http://localhost:8080/api/v1/students/hello/user
+Authorization: Basic user user
+### admin auth
+GET http://localhost:8080/api/v1/students/hello/user
+Authorization: Basic admin admin
+### superadmin auth
+GET http://localhost:8080/api/v1/students/hello/user
+Authorization: Basic superadmin superadmin
+
+
+### Auth error
+GET http://localhost:8080/api/v1/students/hello/admin
+Authorization: Basic user user
+### admin auth
+GET http://localhost:8080/api/v1/students/hello/admin
+Authorization: Basic admin admin
+### superadmin auth
+GET http://localhost:8080/api/v1/students/hello/admin
+Authorization: Basic superadmin superadmin
+
+### unknown works without creds
+GET http://localhost:8080/api/v1/students/hello/unknown
+### GET HELLO UNKNOWN with creds
+GET http://localhost:8080/api/v1/students/hello/unknown
+Authorization: Basic admin admin
+### Hello unknown with user creds
+GET http://localhost:8080/api/v1/students/hello/unknown
+Authorization: Basic user user
+
+### Students endpoints are also secured
+GET http://localhost:8080/api/v1/students
+Authorization: Basic admin admin
+### Fail without creds
+GET http://localhost:8080/api/v1/students

@@ -6,7 +6,7 @@ import java.util.List;
 
 /*
     @author taras
-    @project IntelliJ IDEA
+    @project security
     @class StudentRestController
     @version 1.0.0
     @since 29.03.25 - 21.59

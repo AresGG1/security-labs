@@ -2,7 +2,7 @@ package com.smaha.security.student;
 
 /*
     @author taras
-    @project IntelliJ IDEA
+    @project security
     @class Student
     @version 1.0.0
     @since 29.03.25 - 21.39

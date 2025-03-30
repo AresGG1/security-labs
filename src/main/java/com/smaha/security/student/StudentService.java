@@ -10,7 +10,7 @@ import java.util.List;
 
 /*
     @author taras
-    @project IntelliJ IDEA
+    @project security
     @class StudentService
     @version 1.0.0
     @since 29.03.25 - 21.59
@@ -35,6 +35,7 @@ public class StudentService {
         students.add(new Student("1", "Pavlo", "Stasyk", LocalDate.of(2004, 1, 1)));
         students.add(new Student("2", "Ivan", "Melnyk", LocalDate.of(2004, 2, 15)));
         students.add(new Student("3", "Olha", "Ivanyk", LocalDate.of(2004, 7, 30)));
+        repository.deleteAll();
         repository.saveAll(students);
     }
 
